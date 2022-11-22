@@ -14,7 +14,7 @@ def kaitou(ans_lst):
         print("正解！！！")
     else:
         print("出直してこい")
-    print("回答時間:" + str((ed-st).seconds))
+    print("回答時間:" + str((ed-st).seconds) + "秒")
 
 
 
