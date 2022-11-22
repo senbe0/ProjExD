@@ -15,7 +15,7 @@ def shutudai(alphabet):
     for c in all_chars:
         print(c, end=" ")
     print()
-    
+
 
     #対象文字から欠損文字を2個選択する。(重複なし)
     abs_chars = random.sample(all_chars, num_of_abs_chars)
@@ -30,7 +30,6 @@ def shutudai(alphabet):
         if c not in abs_chars:
            print(c, end=" ")
     print()
-
     return abs_chars
 
 
