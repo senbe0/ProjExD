@@ -1,5 +1,6 @@
 import tkinter as tk
 import tkinter.messagebox as tkm
+import pyperclip
 
 
 # 練習３
@@ -16,7 +17,21 @@ def button_click(event):
         # 練習６
         entry.insert(tk.END, num)
 
-    
+def add_click(event):
+    btn = event.widget
+    func = btn["text"]
+    if func == "del":
+        values = entry.get()
+        values = values[:-1]
+        entry.delete(0,tk.END)
+        entry.insert(0,values)
+    if func == "clear":
+        entry.delete(0, tk.END) # 表示文字列の削除
+    if func == "copy":
+        values = entry.get() # 数式の文字列
+        pyperclip.copy(values)
+        #tkm.showinfo("", f"クリップボードにコピーしました。\nコピーした値： {values}")
+
 # 練習１
 root = tk.Tk()
 root.geometry("300x500")
@@ -28,7 +43,7 @@ entry.grid(row=0, column=0, columnspan=3)
 # 練習２
 r, c = 1, 0
 for num in range(9, -1, -1):
-    button = tk.Button(root, text=f"{num}", width=4, height=2, font=("", 30))
+    button = tk.Button(root, text=f"{num}", width=4, height=1, font=("", 30))
     button.grid(row=r, column=c)
     button.bind("<1>", button_click)
     c += 1
@@ -39,12 +54,24 @@ for num in range(9, -1, -1):
 # 練習５
 operators = ["+", "="]
 for ope in operators:
-    button = tk.Button(root, text=f"{ope}", width=4, height=2, font=("", 30))
+    button = tk.Button(root, text=f"{ope}", width=4, height=1, font=("", 30))
     button.grid(row=r, column=c)
     button.bind("<1>", button_click)
     c += 1
     if c%3 == 0:
         r += 1
         c = 0
+
+# 練習５
+operators = ["copy", "clear", "del"]
+for ope in operators:
+    button = tk.Button(root, text=f"{ope}", width=4, height=1, font=("", 30))
+    button.grid(row=r, column=c)
+    button.bind("<1>", add_click)
+    c += 1
+    if c%3 == 0:
+        r += 1
+        c = 0
+
 
 root.mainloop()
