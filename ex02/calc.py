@@ -22,9 +22,9 @@ def add_click(event):
     func = btn["text"]
     if func == "del":
         values = entry.get()
-        values = values[:-1]
+        aftervalues = values[:-1]
         entry.delete(0,tk.END)
-        entry.insert(0,values)
+        entry.insert(0,aftervalues)
     if func == "clear":
         entry.delete(0, tk.END) # 表示文字列の削除
     if func == "copy":
