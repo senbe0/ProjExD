@@ -30,7 +30,7 @@ def add_click(event):
     if func == "copy":
         values = entry.get() # 数式の文字列
         pyperclip.copy(values)
-        #tkm.showinfo("", f"クリップボードにコピーしました。\nコピーした値： {values}")
+      
 
 # 練習１
 root = tk.Tk()
@@ -62,7 +62,7 @@ for ope in operators:
         r += 1
         c = 0
 
-# 練習５
+# 課題 
 operators = ["copy", "clear", "del"]
 for ope in operators:
     button = tk.Button(root, text=f"{ope}", width=4, height=1, font=("", 30))
