@@ -8,7 +8,6 @@ def key_down(event):
     global key
     key = event.keysym
 
-
 def key_up(event):
     global key
     key = ""
@@ -46,7 +45,7 @@ def main_proc():
         if key == "Up": my += 1
         if key == "Down": my -= 1
         if key == "Left": mx += 1
-        if key == "Right": mx -= 1        
+        if key == "Right": mx -= 1
     cx, cy = mx*100+50, my*100+50
     canvas.coords("kokaton", cx, cy)
     root.after(100, main_proc)
