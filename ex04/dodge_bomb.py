@@ -1,6 +1,7 @@
 import pygame as pg
 import random
 import sys
+import time
 
 
 def check_bound(obj_rct, scr_rct):
@@ -68,8 +69,6 @@ def main():
     
     while True:
         # 動く度にこうかとんが少しずつ大きくなる。
-        import time
-        
         scrn_sfc.blit(pgbg_sfc, pgbg_rct) 
         tori_sfc = pg.image.load("fig/4.png")
         tori_sfc = pg.transform.rotozoom(tori_sfc, 0, big)        
