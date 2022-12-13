@@ -77,7 +77,7 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
-                
+
         # 方向に従って画像を入れ替える
         key_dct = pg.key.get_pressed() # 辞書型
         if key_dct[pg.K_UP]: 
