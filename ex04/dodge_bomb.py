@@ -16,6 +16,7 @@ def check_bound(obj_rct, scr_rct):
 
 
 def main():
+    # 爆弾の大きさ
     big = 2.0
     clock =pg.time.Clock()
     
@@ -76,6 +77,7 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
+                
         # 方向に従って画像を入れ替える
         key_dct = pg.key.get_pressed() # 辞書型
         if key_dct[pg.K_UP]: 
