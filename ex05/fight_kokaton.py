@@ -124,6 +124,7 @@ def main():
     bkd.update(scr)
 
     # 敵キャラ、大きさに合わせて難易度調整可能
+    # ※実行環境に応じて、ファイルの読み込みパスに注意
     enemy = Enemy("data/danger.gif", (+1, +1), scr)
     enemy.update(scr) 
 
