@@ -108,6 +108,7 @@ def check_bound(obj_rct, scr_rct):
         tate = -1
         shoot_sound.play()
     return yoko, tate
+    
 
 def main():
     clock =pg.time.Clock()
