@@ -157,7 +157,7 @@ def main():
     # 練習５
     bkd_lst = []
     color_lst = ["red", "green", "blue", "yellow", "magenta"]
-    for i in range(1):
+    for i in range(10):
         bkd = Bomb(color_lst[i%5], 10, (random.choice(range(-2, 3)), random.choice(range(-2, 3))), scr)
         bkd_lst.append(bkd)
     # bkd.update(scr)
