@@ -135,6 +135,7 @@ def main():
         print("Warning, no sound")
         pg.mixer = None
 
+    #　サウンド追加
     boom_sound = load_sound("boom.wav")
     shoot_sound = load_sound("car_door.wav")
     if pg.mixer:
@@ -142,6 +143,7 @@ def main():
         pg.mixer.music.load(music)
         pg.mixer.music.play(-1)
 
+    #　クロックインスタンス
     clock =pg.time.Clock()
 
     # 練習１
